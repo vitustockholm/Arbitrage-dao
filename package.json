@@ -1,0 +1,26 @@
+{
+  "name": "arbitrage-dao",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MEV / flashloan / DEX arbitrage research framework using Hardhat, Aave V3, UniswapV2, SushiSwap and Flashbots.",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.ts --network mainnet",
+    "scan": "ts-node bot/scanner.ts",
+    "bundle": "ts-node bot/executor.ts",
+    "mempool": "ts-node bot/mempool.ts"
+  },
+  "dependencies": {
+    "@flashbots/ethers-provider-bundle": "latest",
+    "@openzeppelin/contracts": "latest",
+    "dotenv": "latest",
+    "ethers": "^6.13.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "latest",
+    "hardhat": "latest",
+    "ts-node": "latest",
+    "typescript": "latest"
+  }
+}
