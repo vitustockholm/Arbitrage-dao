@@ -2,7 +2,7 @@
 pragma solidity ^0.8.24;
 
 import "./interfaces/IAaveV3Pool.sol";
-import "./interfaces/IUniswapV2Pair.sol";
+import "./interfaces/IUniswapV2PairLite.sol";
 import "./libraries/UniV2Math.sol";
 
 contract FlashLoanArbExecutor {
@@ -44,6 +44,13 @@ contract FlashLoanArbExecutor {
             amount,
             params,
             0
+        );
+    }
+
+    function validatePair(address pair) external view returns (address,address) {
+        return (
+            IUniswapV2PairLite(pair).token0(),
+            IUniswapV2PairLite(pair).token1()
         );
     }
 
