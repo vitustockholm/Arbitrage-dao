@@ -6,21 +6,23 @@
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "deploy": "hardhat run scripts/deploy.ts --network mainnet",
+    "test:mock": "NO_FORK=true hardhat test test/mock-mode.test.ts test/multihop.test.ts",
+    "test:fork": "hardhat test test/fork-network.test.ts",
+    "deploy": "hardhat run scripts/deploy.ts --network arbitrum",
     "scan": "ts-node bot/scanner.ts",
-    "bundle": "ts-node bot/executor.ts",
+    "bundle": "ts-node bot/bundle.ts",
     "mempool": "ts-node bot/mempool.ts"
   },
   "dependencies": {
-    "@flashbots/ethers-provider-bundle": "latest",
-    "@openzeppelin/contracts": "latest",
-    "dotenv": "latest",
-    "ethers": "^6.13.0"
+    "@flashbots/ethers-provider-bundle": "^0.6.2",
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.4"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "latest",
-    "hardhat": "latest",
-    "ts-node": "latest",
-    "typescript": "latest"
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.18",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
   }
 }
