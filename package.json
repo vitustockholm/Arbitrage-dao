@@ -14,15 +14,15 @@
     "mempool": "ts-node bot/mempool.ts"
   },
   "dependencies": {
-    "@flashbots/ethers-provider-bundle": "^0.6.2",
-    "@openzeppelin/contracts": "^5.0.2",
-    "dotenv": "^16.4.5",
-    "ethers": "^6.13.4"
+    "@flashbots/ethers-provider-bundle": "1.0.0",
+    "@openzeppelin/contracts": "5.0.2",
+    "dotenv": "16.4.5",
+    "ethers": "6.7.1"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "hardhat": "^2.22.18",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.7.2"
+    "@nomicfoundation/hardhat-toolbox": "5.0.0",
+    "hardhat": "2.22.18",
+    "ts-node": "10.9.2",
+    "typescript": "5.7.2"
   }
 }
